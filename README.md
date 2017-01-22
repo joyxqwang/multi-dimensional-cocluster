@@ -22,8 +22,8 @@ Format of input:
 Format of output:
 
     outF: cross-tissue cancer cluster indicator from each data type
-    outG: feature cluster indicator of each data type
-    outF_ave: integrated cross-tissue cancer cluster indicator
+    outG: feature cluster indicator of each data type
+    outF_ave: integrated cross-tissue cancer cluster indicator
     obj: objective function value
     
 Simply run the code in matlab as below:
