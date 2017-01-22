@@ -1,3 +1,5 @@
+% M: n*d data matrix for clustering
+% for function "litekmeans" please refer to http://www.cad.zju.edu.cn/home/dengcai/Data/Clustering.html
 function [finalInd Ind kmobj min] = tuneKmeans_new(M, Ini)
 
 min = Inf;
@@ -7,7 +9,6 @@ kmobj = zeros(nIni);
 
 for ii = 1 : nIni
     [Ind(:,ii), center, bCon, sumD, D] = litekmeans(M, NClusters, 'Start', M(Ini(:,ii),:));
-    %[Ind(:,ii), center, bCon, sumD, D] = litekmeans(M, NClusters);
     obj = sum(sumD);
     kmobj(ii) = obj;
     if obj < min
