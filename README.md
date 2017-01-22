@@ -19,10 +19,9 @@ Format of input:
     iniF: initialization of cross-tissue cluster indicator
     lambda: initial value of the hyper-parameter lambda, default value: 10^5
 
-
 Format of output:
 
-    outF: cross-tissue cancer cluster indicator from each data type
+    outF: cross-tissue cancer cluster indicator from each data type
     outG: feature cluster indicator of each data type
     outF_ave: integrated cross-tissue cancer cluster indicator
     obj: objective function value
