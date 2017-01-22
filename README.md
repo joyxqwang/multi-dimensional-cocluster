@@ -28,4 +28,8 @@ Format of output:
     
 Simply run the code in matlab as below:
 
+    [outF, outG, S, outF_ave, obj] = ccl_L1(X, NClusters, NClustersG, iniF)
+
+or
+
     [outF, outG, S, outF_ave, obj] = ccl_L2(X, NClusters, NClustersG, iniF)
