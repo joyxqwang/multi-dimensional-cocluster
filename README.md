@@ -3,9 +3,14 @@
 Code for the multi-dimensional co-clustering model.
 These functions optimize the following problem:
 
+1) ccl_L1:
+
+
     min_{F_i, G_i, S_i, F_ave} \sum_i ||X_i - F_i*S_i*G_i'||_1 +　\lambda * \sum_i||F_ave - F_i||_1
     
 and
+
+2) ccl_L2:
 
     min_{F_i, G_i, S_i, F_ave} \sum_i ||X_i - F_i*S_i*G_i'||_F^2 + \lambda * \sum_i||F_ave - F_i||_F^2
 
