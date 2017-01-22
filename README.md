@@ -13,7 +13,7 @@ Format of input:
 
     n: number of samples
     d: number of features
-    X: d*n data matrix
+    X: cell array, each array denotes a d*n_i matrix for the i-th data type
     NClusters: number of cross-tissue cancer clusters
     NClustersG: number of feature clusters
     iniF: initialization of cross-tissue cluster indicator
