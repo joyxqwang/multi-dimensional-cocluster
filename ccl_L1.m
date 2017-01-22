@@ -23,14 +23,10 @@ for ii = 1 : nType
     nRepeat = 100;
     ncG = NClustersG(ii);
     iniG = zeros(ncG, nRepeat);
-	%iniG = zeros(n, nRepeat);
-	for rr = 1 : nRepeat
-		%iniG(:, rr) = randsrc(n, 1, 1:NClusters);
-        tmp = randperm(n);
+    for rr = 1 : nRepeat
+	tmp = randperm(n);
         iniG(:, rr) = tmp(1:ncG);
-	end;
-%     [bestIndF] = tuneKmeans(XX, iniF);
-%     [bestIndG] = tuneKmeans(XX', iniG);
+    end;
     [bestIndF] = tuneKmeans_new(XX, iniF);
     [bestIndG] = tuneKmeans_new(XX', iniG);
     F_init = [];
@@ -45,7 +41,6 @@ for ii = 1 : nType
     G{ii} = G_init;
         
     % Initialize S
-    %S{ii} = solveS_L1(zeros(NClusters), XX, F{ii}, G{ii});
     S{ii} = solveS_L1(zeros(NClusters,ncG), XX, F{ii}, G{ii});
     
     tmpLoss = sum(sum(abs(XX - F{ii}*S{ii}*G{ii}')));
