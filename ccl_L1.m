@@ -106,6 +106,7 @@ for it = 2 : NITER
     
 end
 
+
 %% Output
 for ii = 1 : nType
     ncG = NClustersG(ii);
