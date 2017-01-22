@@ -7,9 +7,6 @@ function [outF, outG, S, outF_ave, obj, lambda] = ccl_L1(X, NClusters, NClusters
 % F_ave: average of the row cluster indicators
 % Time complexity: O(NdcT), where N = \sum_i n_i
 
-% path_data = 'F:\JoyWang\UTA\PhD\TCGA Landscape\TCGA_landscape_data\';
-% dataList = {'BRCA', 'COAD', 'GBM', 'KIRC', 'KIRP', 'LGG', 'LUAD', 'LUSC', 'OV', 'READ', 'UCEC'};
-
 % Initialization
 NITER = 100;
 nType = length(X);
