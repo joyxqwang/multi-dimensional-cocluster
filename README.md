@@ -1,7 +1,7 @@
 # multi_dimensional_cocluster
 
 Code for the multi-dimensional co-clustering model.
-This function optimizes the following problem:
+These functions optimize the following problem:
 
     min_{F_i, G_i, S_i, F_ave} \sum_i ||X_i - F_i*S_i*G_i'||_1 +　\lambda * \sum_i||F_ave - F_i||_1
     
