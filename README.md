@@ -16,8 +16,8 @@ Format of input:
     X: d*n data matrix
     NClusters: number of cross-tissue cancer clusters
     NClustersG: number of feature clusters
-    iniF: initialization of cross-tissue cluster indicator
-    lambda: initial value of the hyper-parameter lambda, default 10^5
+    iniF: initialization of cross-tissue cluster indicator
+    lambda: initial value of the hyper-parameter lambda, default 10^5
 
 Format of output:
 
