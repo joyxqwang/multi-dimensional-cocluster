@@ -12,22 +12,20 @@ and
 Format of input:
 
     n: number of samples
-    d: number of SNPs
-    c: number of QTs
-    X: n*dim SNP data
-    Y: n*c phenotype matrix
-    options: a structure which optionally contain the following
-        - N: numHidNodes
-        - Act: choice of activation fucntion
-        - computeAlpha: compute alpha if this value is 1
-        - r: hyperparameter for the regularization term
-                
+    d: number of features
+    X: d*n data matrix
+    NClusters: number of cross-tissue cancer clusters
+    NClustersG: number of feature clusters
+    iniF: initialization of cross-tissue cluster indicator
+    lambda: initial value of the hyper-parameter lambda, default value: 10^5
+   
 Format of output:
 
-    predFunc: A function handle to estimate the function for new points
-    beta: weights of the hidden nodes, numHidNodes*c
-    alpha: weights of each SNP in the prediction of phenotypes
-
+    outF: cross-tissue cancer cluster indicator from each data type
+    outG: feature cluster indicator of each data type
+    outF_ave: integrated cross-tissue cancer cluster indicator
+    obj: objective function value
+    
 Simply run the code in matlab as below:
 
-    [predFunc, alpha] = AFNN(X, Y, options);
+    [outF, outG, S, outF_ave, obj, lambda] = ccl_L2(X, NClusters, NClustersG, iniF)
