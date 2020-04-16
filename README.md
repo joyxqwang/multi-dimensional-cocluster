@@ -21,7 +21,7 @@ Format of input:
     NClusters: number of cross-tissue cancer clusters
     NClustersG: number of feature clusters
     iniF: initialization of cross-tissue cluster indicator
-    lambda: initial value of the hyper-parameter, default 10^5
+    lambda: initial value of the hyper-parameter, default value is 10^5
 
 Format of output:
 
@@ -30,7 +30,7 @@ Format of output:
     outF_ave: integrated cross-tissue cancer cluster indicator
     obj: objective function value
     
-Simply run the code in matlab as below:
+To use the function, simply run the code in matlab as below:
 
     [outF, outG, S, outF_ave, obj] = ccl_L1(X, NClusters, NClustersG, iniF)
 
