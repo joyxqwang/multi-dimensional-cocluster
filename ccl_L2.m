@@ -54,7 +54,7 @@ for ii = 1 : nType
     clear tmpF tmpG;
     
     tmpLoss = norm(XX - F{ii}*S{ii}*G{ii}','fro');
-    tmpReg = norm(F{ii}-F_ave, 'fro');
+    tmpReg = norm(F{ii} - F_ave, 'fro');
     tmpObj(ii) = tmpLoss^2 + lambda*tmpReg^2;
 end
 % Initialize F_ave
@@ -98,7 +98,7 @@ for it = 2 : NITER
         S{ii} = invF * tmpG * invG;
         clear tmpF tmpG;
         tmpLoss = norm(XX - F{ii}*S{ii}*G{ii}','fro');
-        tmpReg = norm(F{ii}-F_ave, 'fro');
+        tmpReg = norm(F{ii} - F_ave, 'fro');
         tmpObj(ii) = tmpLoss^2 + lambda*tmpReg^2;
     end
     
