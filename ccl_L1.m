@@ -79,8 +79,9 @@ for it = 2 : NITER
         % Initialize S
         S{ii} = solveS_L1(S{ii}, XX, F{ii}, G{ii});
         
+	% Update loss
         tmpLoss = sum(sum(abs(XX - F{ii}*S{ii}*G{ii}')));
-        tmpReg = sum(sum(abs(F{ii}-F_ave)));
+        tmpReg = sum(sum(abs(F{ii} - F_ave)));
         tmpObj(ii) = tmpLoss + lambda*tmpReg;
     end
     
